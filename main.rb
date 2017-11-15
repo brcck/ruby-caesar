@@ -2,7 +2,13 @@ puts "What's your message?"
 input = gets.chomp
 
 puts "Pick a (secret) number!"
-shift = gets.chomp
+shift = ""
+loop do
+  shift = gets.chomp
+  break if shift.match(/[1-9]+/) != nil # make sure user entered a number.
+  puts "No, enter a *number!*"
+end
+shift = shift.to_i
 
 base = ""
 output = []
