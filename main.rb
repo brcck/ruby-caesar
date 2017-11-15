@@ -29,14 +29,10 @@ def stock_picker(prices)
 end
 
 def substrings(input, dictionary)
-  count = {}
+  count = Hash.new(0)
   dictionary.each do |word|
     input.scan(word) do
-      if count[word].nil?
-        count[word] = 1
-      else
-        count[word] += 1
-      end
+      count[word] += 1
     end
   end
   count
