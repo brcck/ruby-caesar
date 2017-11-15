@@ -25,7 +25,7 @@ def stock_picker(prices)
       end
     end
   end
-  [best_buy, best_sell]
+  [best_buy, best_sell].to_s
 end
 
 def substrings(input, dictionary)
