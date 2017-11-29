@@ -1,13 +1,15 @@
 module Enumerable
   def my_each
-    for index in (0...self.length) do
-      yield(self[index])
+    for item in self do
+      yield(item)
     end
   end
 
   def my_each_with_index
-    for index in (0...self.length) do
-      yield(self[index], index)
+    i = 0
+    for item in self do
+      yield(item, i)
+      i += 1
     end
   end
 
@@ -50,7 +52,7 @@ module Enumerable
     count
   end
 
-  def my_map(proc=nil)
+  def my_map(proc = nil)
     remap = []
     my_each do |item|
       remap << proc.call(item) unless proc.nil?
