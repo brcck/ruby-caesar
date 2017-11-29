@@ -39,6 +39,7 @@ def substrings(input, dictionary)
 end
 
 puts caesar_cipher("What a string!", 5)
+puts caesar_cipher("hello", -48)
 puts stock_picker([17,3,6,9,15,8,6,1,10])
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 puts substrings("below", dictionary)
